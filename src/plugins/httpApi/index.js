@@ -1,5 +1,6 @@
-import {koa} from "src/core"
 import {router} from "fast-koa-router"
+
+import {koa} from "src/core"
 
 export default class Main {
 

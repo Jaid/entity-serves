@@ -1,4 +1,4 @@
-import {got, config, logger} from "src/core"
+import {config, got, logger} from "src/core"
 
 const asin = "B07MLJD32L"
 

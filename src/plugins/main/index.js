@@ -1,6 +1,7 @@
-import ProductState from "src/models/ProductState"
 import intervalPromise from "interval-promise"
 import ms from "ms.macro"
+
+import ProductState from "src/models/ProductState"
 
 export default class Main {
 

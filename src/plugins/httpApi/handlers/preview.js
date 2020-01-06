@@ -1,6 +1,6 @@
+import ProductCheck from "src/models/ProductCheck"
 import ProductFetch from "src/models/ProductFetch"
 import ProductState from "src/models/ProductState"
-import ProductCheck from "src/models/ProductCheck"
 
 /**
  * @type {import("koa").Middleware}

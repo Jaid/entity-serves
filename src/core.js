@@ -5,7 +5,7 @@ import defaults from "./defaults.yml"
 const core = new JaidCore({
   name: _PKG_TITLE,
   version: _PKG_VERSION,
-  insecurePort: 17561,
+  insecurePort: 13251,
   database: "iron-maiden",
   useGot: true,
   databaseExtensions: "hstore",

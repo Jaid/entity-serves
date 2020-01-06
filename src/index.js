@@ -1,5 +1,5 @@
-import TwitchAuth from "lib/plugins/twitchAuth"
 import SocketApi from "lib/plugins/socketApi"
+import TwitchAuth from "lib/plugins/twitchAuth"
 
 import core from "./core"
 
