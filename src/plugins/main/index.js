@@ -1,19 +1,9 @@
-import intervalPromise from "interval-promise"
-import ms from "ms.macro"
+import {JaidCorePlugin} from "jaid-core"
 
-import ProductState from "src/models/ProductState"
-
-export default class Main {
+export default class Main extends JaidCorePlugin {
 
   async ready() {
-    intervalPromise(this.job, ms`1 minute`)
-  }
-
-  async job() {
-    const productStates = await ProductState.findAll()
-    for (const productState of productStates) {
-      await productState.check()
-    }
+    this.log(`Twitch auth URL: http://localhost:${this.core.options.insecurePort}/auth/twitch`)
   }
 
   collectModels() {

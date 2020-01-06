@@ -6,16 +6,12 @@ const core = new JaidCore({
   name: _PKG_TITLE,
   version: _PKG_VERSION,
   insecurePort: 13251,
-  database: "iron-maiden",
+  database: "ironMaiden",
   useGot: true,
   databaseExtensions: "hstore",
   koaSession: {key: "abc"},
   configSetup: {
     defaults,
-    secretKeys: [
-      "twitchClientId",
-      "twitchClientSecret",
-    ],
   },
 })
 
