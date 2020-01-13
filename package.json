@@ -63,5 +63,6 @@
     "prepareActionJest": "npm run build:prod"
   },
   "name": "iron-maiden",
-  "description": "Backend for entity.works, a Dead by Daylight wiki."
+  "description": "Backend for entity.works, a Dead by Daylight wiki.",
+  "funding": "https://github.com/sponsors/jaid"
 }
