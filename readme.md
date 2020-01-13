@@ -1,9 +1,9 @@
 # Iron Maiden
 
 
-<a href="https://raw.githubusercontent.com/Jaid/iron-maiden/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/iron-maiden?style=flat-square" alt="License"/></a>  
-<a href="https://actions-badge.atrox.dev/Jaid/iron-maiden/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2FJaid%2Firon-maiden%2Fbadge" alt="Build status"/></a> <a href="https://github.com/Jaid/iron-maiden/commits"><img src="https://img.shields.io/github/commits-since/Jaid/iron-maiden/v0.1.0?style=flat-square&logo=github" alt="Commits since v0.1.0"/></a> <a href="https://github.com/Jaid/iron-maiden/commits"><img src="https://img.shields.io/github/last-commit/Jaid/iron-maiden?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/Jaid/iron-maiden/issues"><img src="https://img.shields.io/github/issues/Jaid/iron-maiden?style=flat-square&logo=github" alt="Issues"/></a>  
-<a href="https://npmjs.com/package/iron-maiden"><img src="https://img.shields.io/npm/v/iron-maiden?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/iron-maiden/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/iron-maiden?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/iron-maiden"><img src="https://img.shields.io/npm/dm/iron-maiden?style=flat-square&logo=npm" alt="Downloads"/></a>
+<a href="https://raw.githubusercontent.com/jaid/iron-maiden/master/license.txt"><img src="https://img.shields.io/github/license/jaid/iron-maiden?style=flat-square" alt="License"/></a> <a href="https://github.com/sponsors/jaid"><img src="https://img.shields.io/badge/<3-Sponsor-FF45F1?style=flat-square" alt="Sponsor iron-maiden"/></a>
+<a href="https://actions-badge.atrox.dev/jaid/iron-maiden/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2Fjaid%2Firon-maiden%2Fbadge" alt="Build status"/></a> <a href="https://github.com/jaid/iron-maiden/commits"><img src="https://img.shields.io/github/commits-since/jaid/iron-maiden/v0.1.0?style=flat-square&logo=github" alt="Commits since v0.1.0"/></a> <a href="https://github.com/jaid/iron-maiden/commits"><img src="https://img.shields.io/github/last-commit/jaid/iron-maiden?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/jaid/iron-maiden/issues"><img src="https://img.shields.io/github/issues/jaid/iron-maiden?style=flat-square&logo=github" alt="Issues"/></a>  
+<a href="https://npmjs.com/package/iron-maiden"><img src="https://img.shields.io/npm/v/iron-maiden?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/jaid/iron-maiden/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/iron-maiden?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/iron-maiden"><img src="https://img.shields.io/npm/dm/iron-maiden?style=flat-square&logo=npm" alt="Downloads"/></a>
 
 **Backend for entity.works, a Dead by Daylight wiki.**
 
@@ -33,7 +33,6 @@ yarn global add iron-maiden@^0.1.0
 
 
 
-
 ## CLI Usage
 After installing package `iron-maiden` globally, you can use its command line interface.
 ```bash
@@ -53,7 +52,7 @@ iron-maiden --help
 
 Setting up:
 ```bash
-git clone git@github.com:Jaid/iron-maiden.git
+git clone git@github.com:jaid/iron-maiden.git
 cd iron-maiden
 npm install
 ```
