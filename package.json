@@ -6,6 +6,7 @@
   "dependencies": {
     "@absolunet/fsp": "^1.6.2",
     "@babel/runtime": "^7.8.4",
+    "bcrypt": "^3.0.8",
     "cheerio": "^1.0.0-rc.3",
     "cheerio-util": "^2.1.0",
     "ensure-array": "^1.0.0",
