@@ -4,22 +4,22 @@ import User from "src/models/User"
 
 export default async (client, payload) => {
   const lowerUser = payload.user.toLowerCase()
-  const existingUser = await User.findOne({
+  const user = await User.findOne({
     where: {
       name: lowerUser,
     },
   })
-  if (existingUser) {
+  if (!user) {
     return {
-      error: "Already exists!",
+      error: "User not found!",
     }
   }
-  const hash = await bcrypt.hash(payload.password, 5)
-  const user = await User.create({
-    title: payload.user,
-    name: lowerUser,
-    password: hash,
-  })
+  const samePassword = await bcrypt.compare(payload.password, user.password)
+  if (!samePassword) {
+    return {
+      error: "Incorrect password!",
+    }
+  }
   const login = await user.createLogin()
   return {
     title: user.title,
