@@ -6,7 +6,7 @@ const core = new JaidCore({
   name: _PKG_TITLE,
   version: _PKG_VERSION,
   insecurePort: 13251,
-  database: "ironMaiden",
+  database: "entityServes",
   useGot: true,
   databaseExtensions: "hstore",
   koaSession: {key: "abc"},
