@@ -1,9 +1,9 @@
-# Iron Maiden
+# EntityServes
 
 
-<a href="https://raw.githubusercontent.com/jaid/iron-maiden/master/license.txt"><img src="https://img.shields.io/github/license/jaid/iron-maiden?style=flat-square" alt="License"/></a> <a href="https://github.com/sponsors/jaid"><img src="https://img.shields.io/badge/<3-Sponsor-FF45F1?style=flat-square" alt="Sponsor iron-maiden"/></a>  
-<a href="https://actions-badge.atrox.dev/jaid/iron-maiden/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2Fjaid%2Firon-maiden%2Fbadge" alt="Build status"/></a> <a href="https://github.com/jaid/iron-maiden/commits"><img src="https://img.shields.io/github/commits-since/jaid/iron-maiden/v1.0.0?style=flat-square&logo=github" alt="Commits since v1.0.0"/></a> <a href="https://github.com/jaid/iron-maiden/commits"><img src="https://img.shields.io/github/last-commit/jaid/iron-maiden?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/jaid/iron-maiden/issues"><img src="https://img.shields.io/github/issues/jaid/iron-maiden?style=flat-square&logo=github" alt="Issues"/></a>  
-<a href="https://npmjs.com/package/iron-maiden"><img src="https://img.shields.io/npm/v/iron-maiden?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/jaid/iron-maiden/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/iron-maiden?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/iron-maiden"><img src="https://img.shields.io/npm/dm/iron-maiden?style=flat-square&logo=npm" alt="Downloads"/></a>
+<a href="https://raw.githubusercontent.com/jaid/entity-serves/master/license.txt"><img src="https://img.shields.io/github/license/jaid/entity-serves?style=flat-square" alt="License"/></a> <a href="https://github.com/sponsors/jaid"><img src="https://img.shields.io/badge/<3-Sponsor-FF45F1?style=flat-square" alt="Sponsor entity-serves"/></a>  
+<a href="https://actions-badge.atrox.dev/jaid/entity-serves/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2Fjaid%2Fentity-serves%2Fbadge" alt="Build status"/></a> <a href="https://github.com/jaid/entity-serves/commits"><img src="https://img.shields.io/github/commits-since/jaid/entity-serves/v1.0.0?style=flat-square&logo=github" alt="Commits since v1.0.0"/></a> <a href="https://github.com/jaid/entity-serves/commits"><img src="https://img.shields.io/github/last-commit/jaid/entity-serves?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/jaid/entity-serves/issues"><img src="https://img.shields.io/github/issues/jaid/entity-serves?style=flat-square&logo=github" alt="Issues"/></a>  
+<a href="https://npmjs.com/package/entity-serves"><img src="https://img.shields.io/npm/v/entity-serves?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/jaid/entity-serves/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/entity-serves?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/entity-serves"><img src="https://img.shields.io/npm/dm/entity-serves?style=flat-square&logo=npm" alt="Downloads"/></a>
 
 **Backend for entity.works, a Dead by Daylight wiki.**
 
@@ -13,23 +13,23 @@
 
 ## Installation
 
-<a href="https://npmjs.com/package/iron-maiden"><img src="https://img.shields.io/badge/npm-iron--maiden-C23039?style=flat-square&logo=npm" alt="iron-maiden on npm"/></a>
+<a href="https://npmjs.com/package/entity-serves"><img src="https://img.shields.io/badge/npm-entity--serves-C23039?style=flat-square&logo=npm" alt="entity-serves on npm"/></a>
 
 ```bash
-npm install --global iron-maiden@^1.0.0
+npm install --global entity-serves@^1.0.0
 ```
 
-<a href="https://yarnpkg.com/package/iron-maiden"><img src="https://img.shields.io/badge/Yarn-iron--maiden-2F8CB7?style=flat-square&logo=yarn&logoColor=white" alt="iron-maiden on Yarn"/></a>
+<a href="https://yarnpkg.com/package/entity-serves"><img src="https://img.shields.io/badge/Yarn-entity--serves-2F8CB7?style=flat-square&logo=yarn&logoColor=white" alt="entity-serves on Yarn"/></a>
 
 ```bash
-yarn global add iron-maiden@^1.0.0
+yarn global add entity-serves@^1.0.0
 ```
 
-<a href="https://github.com/jaid/iron-maiden/packages"><img src="https://img.shields.io/badge/GitHub Packages-@jaid/iron--maiden-24282e?style=flat-square&logo=github" alt="@jaid/iron-maiden on GitHub Packages"/></a>  
+<a href="https://github.com/jaid/entity-serves/packages"><img src="https://img.shields.io/badge/GitHub Packages-@jaid/entity--serves-24282e?style=flat-square&logo=github" alt="@jaid/entity-serves on GitHub Packages"/></a>  
 (if [configured properly](https://help.github.com/en/github/managing-packages-with-github-packages/configuring-npm-for-use-with-github-packages))
 
 ```bash
-npm install --global @jaid/iron-maiden@^1.0.0
+npm install --global @jaid/entity-serves@^1.0.0
 ```
 
 
@@ -45,13 +45,13 @@ npm install --global @jaid/iron-maiden@^1.0.0
 
 
 ## CLI Usage
-After installing package `iron-maiden` globally, you can use its command line interface.
+After installing package `entity-serves` globally, you can use its command line interface.
 ```bash
-iron-maiden
+entity-serves
 ```
 For usage instructions:
 ```bash
-iron-maiden --help
+entity-serves --help
 ```
 
 
@@ -63,8 +63,8 @@ iron-maiden --help
 
 Setting up:
 ```bash
-git clone git@github.com:jaid/iron-maiden.git
-cd iron-maiden
+git clone git@github.com:jaid/entity-serves.git
+cd entity-serves
 npm install
 ```
 Testing:
