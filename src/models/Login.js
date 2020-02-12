@@ -6,8 +6,11 @@ class Login extends Sequelize.Model {
    * @param {Object<string, import("sequelize").Model>} models
    */
   static associate(models) {
-    // models.User.hasMany(Login)
-    Login.belongsTo(models.User)
+    Login.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false,
+      },
+    })
   }
 
 }

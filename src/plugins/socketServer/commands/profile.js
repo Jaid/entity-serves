@@ -1,5 +1,3 @@
-import {pick} from "lodash"
-
 import User from "src/models/User"
 
 export default async (client, payload) => {
@@ -8,10 +6,14 @@ export default async (client, payload) => {
     where: {
       name: lowerUser,
     },
+    attributes: [
+      "title",
+      "name",
+    ],
     raw: true,
   })
   if (!user) {
     return null
   }
-  return pick(user, ["title", "name"])
+  return user
 }
