@@ -8,6 +8,6 @@ export default async (client, payload) => {
     return {error: "Not logged in!"}
   }
   const user = await User.findByPk(client.userId)
-  const build = await Build.addBuild(user.id, payload)
+  const build = await Build.addBuild(payload.formType, user.id, payload.formData)
   return pick(build, ["linkId", "seoLinkId"])
 }

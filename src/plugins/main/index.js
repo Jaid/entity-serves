@@ -1,22 +1,9 @@
 import {JaidCorePlugin} from "jaid-core"
+import sequelize from "sequelize"
 
-import User from "src/models/User"
+import Build from "src/models/Build"
 
 export default class Main extends JaidCorePlugin {
-
-  async ready() {
-    // this.log(`Twitch auth URL: http://localhost:${this.core.options.insecurePort}/auth/twitch`)
-    // this.core.plugins.twitchAuth.eventEmitter.on("login", async result => {
-    //   if (!result.isNew) {
-    //     return
-    //   }
-    //   const twitchUser = result.twitchUser
-    //   const user = await User.create({
-    //     TwitchUserId: twitchUser.id,
-    //     title: twitchUser.displayName,
-    //   })
-    // })
-  }
 
   collectModels() {
     const models = {}

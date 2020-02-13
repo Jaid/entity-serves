@@ -1,3 +1,5 @@
+import {omit} from "lodash"
+
 import Build from "src/models/Build"
 import User from "src/models/User"
 
@@ -7,7 +9,7 @@ export default async (client, payload) => {
       linkId: payload,
     },
     attributes: [
-      "title",
+      "UserId",
       "data",
       "type",
       "createdAt",
@@ -18,7 +20,7 @@ export default async (client, payload) => {
   if (!build) {
     return null
   }
-  const user = await User.findByPk(client.userId, {
+  const user = await User.findByPk(build.UserId, {
     attributes: [
       "name",
       "title",
@@ -26,7 +28,7 @@ export default async (client, payload) => {
     raw: true,
   })
   return {
-    ...build,
+    ...omit(build, "UserId"),
     userName: user.name,
     userTitle: user.title,
   }
