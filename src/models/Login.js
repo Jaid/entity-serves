@@ -22,7 +22,8 @@ export const schema = {
   apiKey: {
     type: Sequelize.UUID,
     defaultValue: Sequelize.UUIDV4,
-    primaryKey: true,
+    allowNull: false,
+    unique: true,
   },
 }
 

@@ -21,7 +21,10 @@ export default class SocketServer extends JaidCorePlugin {
           const loginValue = JSON.parse(loginCookie)
           if (loginValue.key) {
             client.apiKey = loginValue.key
-            const login = await Login.findByPk(client.apiKey, {
+            const login = await Login.findOne({
+              where: {
+                apiKey: client.apiKey,
+              },
               attributes: ["UserId"],
               raw: true,
             })
