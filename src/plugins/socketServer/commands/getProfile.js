@@ -13,6 +13,7 @@ export default async (client, payload) => {
       "id",
       "title",
       "name",
+      "createdAt",
     ],
     raw: true,
   })
