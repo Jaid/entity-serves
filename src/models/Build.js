@@ -15,15 +15,13 @@ class Build extends Sequelize.Model {
     })
   }
 
-  static async addKillerLoadout(userId, payload) {
-    const {title = "Killer Loadout", ...rawData} = payload
+  static async addBuild(type, userId, payload) {
     const build = await Build.create({
+      type,
       UserId: userId,
-      type: "killerLoadout",
-      title,
-      data: rawData,
+      data: payload,
       linkId: uniqid.time(),
-      seoLinkId: paramCase(title),
+      seoLinkId: paramCase(payload.title || paramCase(type)),
     })
     return build
   }
@@ -34,11 +32,6 @@ class Build extends Sequelize.Model {
  * @type {import("sequelize").ModelAttributes}
  */
 export const schema = {
-  title: {
-    type: Sequelize.STRING,
-    allowNull: false,
-    defaultValue: "Build",
-  },
   type: {
     type: Sequelize.STRING(32),
     allowNull: false,
