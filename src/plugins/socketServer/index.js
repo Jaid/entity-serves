@@ -41,6 +41,7 @@ export default class SocketServer extends JaidCorePlugin {
           const context = {
             client,
             userId: client.userId,
+            logger: this.logger,
           }
           const result = await command.default(context, ...args)
           if (result !== undefined) {

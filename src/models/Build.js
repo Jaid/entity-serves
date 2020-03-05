@@ -23,6 +23,8 @@ class Build extends Sequelize.Model {
       linkId: uniqid.time(),
       seoLinkId: paramCase(payload.title || paramCase(type)),
     })
+    build.linkId = build.id
+    await build.save()
     return build
   }
 

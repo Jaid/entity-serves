@@ -1,7 +1,4 @@
 import {JaidCorePlugin} from "jaid-core"
-import sequelize from "sequelize"
-
-import Build from "src/models/Build"
 
 export default class Main extends JaidCorePlugin {
 

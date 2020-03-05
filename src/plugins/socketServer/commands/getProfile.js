@@ -3,7 +3,7 @@ import {omit} from "lodash"
 import Build from "src/models/Build"
 import User from "src/models/User"
 
-export default async (client, payload) => {
+export default async (context, payload) => {
   const lowerUser = payload.toLowerCase()
   const user = await User.findOne({
     where: {

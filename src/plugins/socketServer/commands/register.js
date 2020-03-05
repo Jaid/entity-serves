@@ -2,7 +2,7 @@ import bcrypt from "bcrypt"
 
 import User from "src/models/User"
 
-export default async (client, payload) => {
+export default async (context, payload) => {
   const lowerUser = payload.user.toLowerCase()
   const existingUser = await User.findOne({
     where: {

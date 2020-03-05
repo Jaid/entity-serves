@@ -1,6 +1,6 @@
 import Build from "src/models/Build"
 
-export default async (client, payload) => {
+export default async (context, payload) => {
   const result = await Build.findAll({
     where: payload.where,
     limit: payload.limit || 10,

@@ -2,7 +2,7 @@ import bcrypt from "bcrypt"
 
 import User from "src/models/User"
 
-export default async (client, payload) => {
+export default async (context, payload) => {
   const lowerUser = payload.user.toLowerCase()
   const user = await User.findOne({
     where: {
@@ -21,8 +21,8 @@ export default async (client, payload) => {
     }
   }
   const login = await user.createLogin()
-  client.apiKey = login.apiKey
-  client.userId = user.id
+  context.client.apiKey = login.apiKey
+  context.client.userId = user.id
   return {
     title: user.title,
     name: user.name,
