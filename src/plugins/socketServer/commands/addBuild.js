@@ -9,6 +9,5 @@ export default async (context, payload) => {
   }
   const user = await User.findByPk(context.userId)
   const build = await Build.addBuild(payload.formType, user.id, payload.formData)
-  context.logger.info(`Created build: ${build.id}/${build.seoLinkId}`)
   return pick(build, ["id", "seoLinkId"])
 }
