@@ -1,6 +1,5 @@
 import {paramCase} from "param-case"
 import Sequelize from "sequelize"
-import uniqid from "uniqid"
 
 class Build extends Sequelize.Model {
 
@@ -40,6 +39,10 @@ export const schema = {
     allowNull: false,
   },
   seoLinkId: Sequelize.STRING,
+}
+
+export const modelOptions = {
+  paranoid: true,
 }
 
 export default Build
