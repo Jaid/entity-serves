@@ -1,10 +1,12 @@
 import cookie from "cookie"
+import hasContent from "has-content"
 import {JaidCorePlugin} from "jaid-core"
 import {last} from "lodash"
 import socketIo from "socket.io"
 
 import socketEnhancer from "lib/socketEnhancer"
 
+import ApiCall from "src/models/ApiCall"
 import Login from "src/models/Login"
 
 const commandsRequire = require.context("./commands/", false)
@@ -43,7 +45,17 @@ export default class SocketServer extends JaidCorePlugin {
             userId: client.userId,
             logger: this.logger,
           }
+          const startTime = Date.now()
+          const payload = args.length > 1 ? args.slice(0, -1) : null
           const result = await command.default(context, ...args)
+          const time = Date.now() - startTime
+          ApiCall.create({
+            result,
+            time,
+            type: commandName,
+            payload,
+            UserId: client.userId,
+          })
           if (result !== undefined) {
             last(args)(result)
           }
