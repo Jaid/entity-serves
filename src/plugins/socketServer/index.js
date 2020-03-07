@@ -1,5 +1,4 @@
 import cookie from "cookie"
-import hasContent from "has-content"
 import {JaidCorePlugin} from "jaid-core"
 import {last} from "lodash"
 import socketIo from "socket.io"
