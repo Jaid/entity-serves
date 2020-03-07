@@ -20,11 +20,8 @@ class Build extends Sequelize.Model {
       type,
       UserId: userId,
       data: payload,
-      linkId: uniqid.time(),
       seoLinkId: paramCase(payload.title || paramCase(type)),
     })
-    build.linkId = build.id
-    await build.save()
     return build
   }
 
@@ -41,11 +38,6 @@ export const schema = {
   data: {
     type: Sequelize.JSONB,
     allowNull: false,
-  },
-  linkId: {
-    type: Sequelize.STRING(64),
-    allowNull: false,
-    unique: true,
   },
   seoLinkId: Sequelize.STRING,
 }

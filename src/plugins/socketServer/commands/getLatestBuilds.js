@@ -5,9 +5,9 @@ export default async (context, payload) => {
     where: payload.where,
     limit: payload.limit || 10,
     attributes: [
+      "id",
       "data",
       "type",
-      "linkId",
       "seoLinkId",
       "createdAt",
       "updatedAt",

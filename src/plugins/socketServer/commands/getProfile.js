@@ -1,5 +1,3 @@
-import {omit} from "lodash"
-
 import Build from "src/models/Build"
 import User from "src/models/User"
 
@@ -26,9 +24,9 @@ export default async (context, payload) => {
     },
     limit: 10,
     attributes: [
+      "id",
       "data",
       "type",
-      "linkId",
       "seoLinkId",
       "createdAt",
       "updatedAt",
@@ -37,7 +35,7 @@ export default async (context, payload) => {
     raw: true,
   })
   return {
-    user: omit(user, "id"),
+    user,
     latestBuilds,
   }
 }

@@ -4,10 +4,7 @@ import Build from "src/models/Build"
 import User from "src/models/User"
 
 export default async (client, payload) => {
-  const build = await Build.findOne({
-    where: {
-      linkId: payload,
-    },
+  const build = await Build.findByPk(Number(payload), {
     attributes: [
       "UserId",
       "data",
