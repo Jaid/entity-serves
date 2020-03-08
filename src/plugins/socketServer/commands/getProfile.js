@@ -18,7 +18,7 @@ export default async (context, payload) => {
   if (!user) {
     return null
   }
-  const latestBuilds = await Build.findAll({
+  const latestBuilds = await Build.findAndCountAll({
     where: {
       UserId: user.id,
     },
