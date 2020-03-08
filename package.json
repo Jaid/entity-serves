@@ -10,6 +10,7 @@
     "cheerio": "^1.0.0-rc.3",
     "cheerio-util": "^2.1.0",
     "cookie": "^0.4.0",
+    "dead-by-daylight": "^1.14.0",
     "ensure-array": "^1.0.0",
     "essential-config": "^4.0.2",
     "express": "^4.17.1",
