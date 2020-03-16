@@ -21,6 +21,8 @@ export default async (context, payload) => {
     password: hash,
   })
   const login = await user.createLogin()
+  context.client.apiKey = login.apiKey
+  context.client.userId = user.id
   return {
     title: user.title,
     name: user.name,
