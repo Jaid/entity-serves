@@ -43,7 +43,6 @@ npm install --global @jaid/entity-serves@^3.6.0
 
 
 
-
 ## CLI Usage
 After installing package `entity-serves` globally, you can use its command line interface.
 ```bash
@@ -79,4 +78,4 @@ npm run test
 
 ## License
 [MIT License](https://raw.githubusercontent.com/jaid/entity-serves/master/license.txt)  
-Copyright © 2020, Jaid <jaid.jsx@gmail.com> (github.com/jaid)
+Copyright © 2020, Jaid \<jaid.jsx@gmail.com> (https://github.com/jaid)
