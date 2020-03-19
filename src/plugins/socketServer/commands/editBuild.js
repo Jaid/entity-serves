@@ -1,6 +1,4 @@
-import {isEqual, pick} from "lodash"
-
-import buildDataNormalizers from "lib/buildDataNormalizers"
+import {pick} from "lodash"
 
 import Build from "src/models/Build"
 
@@ -16,8 +14,8 @@ export default async (context, payload) => {
     context.client.emit("toast", message)
     return {error: message}
   }
-  const buildData = buildDataNormalizers[build.type](payload.formData)
-  if (isEqual(build.data, buildData)) {
+  const changed = await build.applyEdit(payload.formData)
+  if (!changed) {
     const message = "Unchanged"
     context.client.emit("toast", message)
     return {
@@ -25,9 +23,6 @@ export default async (context, payload) => {
       unchanged: true,
     }
   }
-  await build.update({
-    data: buildData,
-  })
   context.client.emit("toast", "Your changes have been published")
   return pick(build, ["id", "seoLinkId"])
 }

@@ -1,7 +1,10 @@
+import {isEqual} from "lodash"
 import {paramCase} from "param-case"
 import Sequelize from "sequelize"
 
 import buildDataNormalizers from "lib/buildDataNormalizers"
+
+import BuildRevision from "./BuildRevision"
 
 class Build extends Sequelize.Model {
 
@@ -27,6 +30,21 @@ class Build extends Sequelize.Model {
     return build
   }
 
+  async applyEdit(newData) {
+    const buildData = buildDataNormalizers[this.type](newData)
+    if (isEqual(this.data, buildData)) {
+      return false
+    }
+    await BuildRevision.create({
+      BuildId: this.id,
+      data: this.data,
+    })
+    await this.update({
+      data: buildData,
+    })
+    return true
+  }
+
 }
 
 /**
@@ -44,6 +62,9 @@ export const schema = {
   seoLinkId: Sequelize.STRING,
 }
 
+/**
+ * @type {import("sequelize").ModelOptions}
+ */
 export const modelOptions = {
   paranoid: true,
 }
