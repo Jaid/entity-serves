@@ -92,8 +92,12 @@ export default {
     const killerIds = sortBy(Object.keys(data.tiers))
     for (const killerId of killerIds) {
       const normalizedId = killerId.trim()
+      const tier = data.tiers[killerId].tier
+      if (!tier || tier === "unrated") {
+        continue
+      }
       normalizedData.tiers[normalizedId] = {
-        tier: data.tiers[killerId].tier,
+        tier,
       }
       if (hasContent(data.tiers[killerId].comment)) {
         normalizedData.tiers[normalizedId].comment = data.tiers[killerId].comment.trim()
