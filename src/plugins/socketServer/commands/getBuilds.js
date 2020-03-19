@@ -10,11 +10,26 @@ function getWhere(payload) {
     where.type = payload.type
   }
   if (payload.filterType === "perk") {
-    const perk = deadByDaylight.perks[payload.value]
-    where.type = perk.for === "killer" ? "killerLoadout" : "survivorLoadout"
     where[Op.or] = [1, 2, 3, 4].map(slotIndex => ({
       data: {
-        [`perk${slotIndex}`]: perk.id,
+        [`perk${slotIndex}`]: payload.value,
+      },
+    }))
+  }
+  if (payload.filterType === "killer") {
+    where.data = {
+      killer: payload.value,
+    }
+  }
+  if (payload.filterType === "survivor") {
+    where.data = {
+      survivor: payload.value,
+    }
+  }
+  if (payload.filterType === "addOn") {
+    where[Op.or] = [1, 2].map(slotIndex => ({
+      data: {
+        [`addOn${slotIndex}`]: payload.value,
       },
     }))
   }
