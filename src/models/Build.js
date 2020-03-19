@@ -1,6 +1,8 @@
 import {paramCase} from "param-case"
 import Sequelize from "sequelize"
 
+import buildDataNormalizers from "lib/buildDataNormalizers"
+
 class Build extends Sequelize.Model {
 
   /**
@@ -15,10 +17,11 @@ class Build extends Sequelize.Model {
   }
 
   static async addBuild(type, userId, payload) {
+    const buildData = buildDataNormalizers[type](payload)
     const build = await Build.create({
       type,
       UserId: userId,
-      data: payload,
+      data: buildData,
       seoLinkId: paramCase(payload.title || paramCase(type)),
     })
     return build
