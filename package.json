@@ -10,7 +10,7 @@
     "cheerio": "^1.0.0-rc.3",
     "cheerio-util": "^2.1.0",
     "cookie": "^0.4.0",
-    "dead-by-daylight": "^1.17.3",
+    "dead-by-daylight": "^1.18.0",
     "ensure-array": "^1.0.0",
     "essential-config": "^4.0.2",
     "express": "^4.17.1",
@@ -23,7 +23,7 @@
     "jaid-core": "^7.5.0",
     "jaid-core-dashboard": "^1.2.2",
     "jaid-logger": "^2.0.0",
-    "json5": "^2.1.1",
+    "json5": "^2.1.2",
     "koa": "^2.11.0",
     "lodash": "^4.17.15",
     "nanoid": "^2.1.11",
@@ -39,7 +39,7 @@
     "twitch": "^4.0.7",
     "uniqid": "^5.2.0",
     "user-agents": "^1.0.559",
-    "yargs": "^15.3.0"
+    "yargs": "^15.3.1"
   },
   "devDependencies": {
     "acorn": "^7.1.1",
