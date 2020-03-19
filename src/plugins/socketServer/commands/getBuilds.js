@@ -33,6 +33,9 @@ function getWhere(payload) {
       },
     }))
   }
+  if (payload.filterType === "userId") {
+    where.UserId = payload.value
+  }
   return where
 }
 
@@ -49,6 +52,7 @@ function getOrder(input) {
 function getAttributes(input) {
   if (!input) {
     return [
+      "id",
       "UserId",
       "data",
       "type",
@@ -82,7 +86,7 @@ function getLimit(input) {
   return input
 }
 
-export default async (client, payload) => {
+export default async (context, payload) => {
   const builds = await Build.findAndCountAll({
     where: getWhere(payload),
     limit: getLimit(payload.limit),
@@ -91,5 +95,10 @@ export default async (client, payload) => {
     order: getOrder(payload.order),
     include: [getUserInclude(payload.userAttributes)],
   })
+  for (const build of builds.rows) {
+    if (build.UserId === context.client.userId) {
+      build.editable = true
+    }
+  }
   return builds
 }

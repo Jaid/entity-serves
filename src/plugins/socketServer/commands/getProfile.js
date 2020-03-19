@@ -1,6 +1,8 @@
 import Build from "src/models/Build"
 import User from "src/models/User"
 
+import getBuilds from "./getBuilds"
+
 export default async (context, payload) => {
   const lowerUser = payload.toLowerCase()
   const user = await User.findOne({
@@ -18,21 +20,9 @@ export default async (context, payload) => {
   if (!user) {
     return null
   }
-  const latestBuilds = await Build.findAndCountAll({
-    where: {
-      UserId: user.id,
-    },
-    limit: 10,
-    attributes: [
-      "id",
-      "data",
-      "type",
-      "seoLinkId",
-      "createdAt",
-      "updatedAt",
-    ],
-    order: [["updatedAt", "DESC"]],
-    raw: true,
+  const latestBuilds = await getBuilds(context, {
+    filterType: "userId",
+    value: user.id,
   })
   return {
     user,
