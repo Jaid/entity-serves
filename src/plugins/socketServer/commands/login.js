@@ -10,12 +10,14 @@ export default async (context, payload) => {
     },
   })
   if (!user) {
+    context.client.emit("toast", "User not found!")
     return {
       error: "User not found!",
     }
   }
   const samePassword = await bcrypt.compare(payload.password, user.password)
   if (!samePassword) {
+    context.client.emit("toast", "Incorrect password!")
     return {
       error: "Incorrect password!",
     }
@@ -23,6 +25,7 @@ export default async (context, payload) => {
   const login = await user.createLogin()
   context.client.apiKey = login.apiKey
   context.client.userId = user.id
+  context.client.emit("toast", `Hello, ${user.title}!`)
   return {
     title: user.title,
     name: user.name,

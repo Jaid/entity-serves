@@ -10,6 +10,7 @@ export default async (context, payload) => {
     },
   })
   if (existingUser) {
+    context.client.emit("toast", `${existingUser.title} already exists`)
     return {
       error: "Already exists!",
     }
@@ -23,6 +24,7 @@ export default async (context, payload) => {
   const login = await user.createLogin()
   context.client.apiKey = login.apiKey
   context.client.userId = user.id
+  context.client.emit("toast", `Welcome, ${user.title}!`)
   return {
     title: user.title,
     name: user.name,
