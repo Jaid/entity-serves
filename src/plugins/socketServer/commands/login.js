@@ -1,9 +1,11 @@
 import bcrypt from "bcrypt"
 
+import sanitizeUsername from "lib/sanitizeUsername"
+
 import User from "src/models/User"
 
 export default async (context, payload) => {
-  const lowerUser = payload.user.toLowerCase()
+  const lowerUser = sanitizeUsername(payload.user)
   const user = await User.findOne({
     where: {
       name: lowerUser,
