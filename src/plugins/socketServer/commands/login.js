@@ -5,16 +5,23 @@ import sanitizeUsername from "lib/sanitizeUsername"
 import User from "src/models/User"
 
 export default async (context, payload) => {
-  const lowerUser = sanitizeUsername(payload.user)
-  const user = await User.findOne({
+  const lowerUser = payload.user.toLowerCase()
+  let user = await User.findOne({
     where: {
       name: lowerUser,
     },
   })
   if (!user) {
-    context.client.emit("toast", "User not found!")
-    return {
-      error: "User not found!",
+    user = await User.findOne({
+      where: {
+        name: sanitizeUsername(lowerUser),
+      },
+    })
+    if (!user) {
+      context.client.emit("toast", "User not found!")
+      return {
+        error: "User not found!",
+      }
     }
   }
   const samePassword = await bcrypt.compare(payload.password, user.password)
