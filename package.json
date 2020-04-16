@@ -53,7 +53,7 @@
     "jest": "^25.3.0",
     "rimraf": "^3.0.2",
     "webpack": "^4.42.1",
-    "webpack-config-jaid": "^11.7.2"
+    "webpack-config-jaid": "^11.8.0"
   },
   "scripts": {
     "clean": "rimraf dist/",
