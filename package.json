@@ -76,5 +76,7 @@
     "type": "git",
     "url": "https://github.com/jaid/entity-serves"
   },
-  "private": true
+  "private": true,
+  "homepage": "https://github.com/Jaid/entity-serves",
+  "keywords": []
 }
