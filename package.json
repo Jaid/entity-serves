@@ -77,5 +77,11 @@
   },
   "private": true,
   "homepage": "https://github.com/Jaid/entity-serves",
-  "keywords": []
+  "keywords": [
+    "backend",
+    "cli",
+    "dead-by-daylight",
+    "entity-works",
+    "wiki"
+  ]
 }
