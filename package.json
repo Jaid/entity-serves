@@ -83,5 +83,6 @@
     "dead-by-daylight",
     "entity-works",
     "wiki"
-  ]
+  ],
+  "type": "module"
 }
